@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'evenements',
     'galerie',
     'accounts',
-    'bootstrap_modal_forms'
 ]
 
 MIDDLEWARE = [
