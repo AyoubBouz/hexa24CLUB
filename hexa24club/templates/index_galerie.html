@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles%}
+{% block body_block %}
+<div class="container">
+  <div class="text-center">
+    <!--<img src=" imgs.image.url" alt="Ops!" class="img-thumbnail" width="200" height="200">-->
+    {% for img in imgs %}
+    <img src="{{ img.image.url }}"alt="OPS!" class="img-thumbnail"/>
+    {% endfor%}
+</div>
+</div>
+{% endblock %}

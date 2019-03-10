@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron" style="color:#e5ddb9;font-family:fantasy;font-size:60px;text-align:center;">
+{{welcome}}
+<div style="color:#aa6c00;font-family:Impact, Charcoal, sans-serif;font-size:60px;text-align:center;">
+{{clubname}}
+</div>
+  </div>
+  <table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Chef du Projet</th>
+      <th scope="col">Nom du Projet</th>
+      <th scope="col">Nature</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in projs %}
+    <tr>
+      <th scope="row">{{p.id}}</th>
+      <td>{{p.chef}}</td>
+      <td>{{p.pname}}</td>
+      <td>{{p.nature}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

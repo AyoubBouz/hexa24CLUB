@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/mystyle.css"%}">
+    <title></title>
+
+  </head>
+  <body style="background:url(http://i.imgur.com/31lk4Dm.png) center center no-repeat;background-size: cover; ">
+    <header>
+
+      <div class="container">
+    <!--NAVBARbdat-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <ul class="navbar-nav mr-auto">
+         <li> <a class="navbar-brand" href="{% url 'home'%}"><img src="{% static "images/hexa24_logo_gif.gif"%}" height="100" width="100" name="hexa24_logo"></a> </li>
+       </ul>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mr-auto">
+         <li> <a class="nav-link" href="{% url "projets:index_projets" %}">Projets</a></li>
+         <li> <a class="nav-link" href="{% url "evenements:index_evenements" %}">Evénements</a></li>
+         <li> <a class="nav-link" href="{% url "galerie:index_galerie" %}">Galerie</a></li>
+       </ul>
+       <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+  <!--  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>-->
+
+    <button type="button" class="btn btn-outline-warning my-2 my-sm-0">Log In</button>
+    <button type="button" class="btn btn-outline-warning my-2 my-sm-0">S'inscrire</button>
+
+    </nav>
+  </nav>
+   <!--NAVBARsalat-->
+ </div>
+ </header>
+
+ <div class="container">
+   {% block body_block %}
+   {% endblock %}
+
+ </div>
+<footer>
+  <div class="text-center center-block">
+              <p class="txt-railway">- Hexa24Club &copy; -</p>
+                  <a href="https://www.facebook.com/Hexa24Club"><i class="fa fa-facebook-square fa-3x social"></i></a>
+  	            <a href="mailto:hexa24club@gmail.com"><i class="fa fa-envelope-square fa-3x social"></i></a>
+  </div>
+</footer>
+      <script type="text/javascript" src="{% static "js/jquery-3.3.1.min"%}"> </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </body>
+</html>
